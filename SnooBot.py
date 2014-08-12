@@ -20,7 +20,7 @@ Idle in chat and follow some basic commands to get stuff from reddit.
 """
 
 print("SnooBot v 0.0000000000000000001." \
-        "\n\nSearching for posts on /r/multiplayers")
+        "\n\nSearching for posts on /r/askreddit")
 
 r = praw.Reddit('AskReddit [Stories] Aggregator Bot, v 0.00000000001'
                 'Seriously.  This thing is in, like, super alpha.'
@@ -40,8 +40,8 @@ First, let's make a list of some of the common ways to write the tag
 storytags = ['[stories]', '[story]', '[ stories]', '[stories ]', '[ stories ]', 'stories only']
 
 while True:
-        subreddit = r.get_subreddit('multiplayers')
-        for submission in subreddit.get_new(limit=150):
+        subreddit = r.get_subreddit('askreddit')
+        for submission in subreddit.get_hot(limit=150):
 #	    try:
                 """
                 Find the [Stories] tag
@@ -60,7 +60,7 @@ while True:
                         for comment in submission.comments:
                                 numcoms+=1
                         print("        | Total number of comments on this story: {0}".format(numcoms))
-                        if numcoms > 2:
+                        if numcoms > 15:
                                 print("        | Building submission reply.")
                                 makeaggregate = "Hello!  I am an aggregator bot designed to make it easier to find the stories posted in this topic.  Below is a list of stories:\n\nStory Blurb | Author\n--- | ---"
 				print("        | ======================================================================\
@@ -119,6 +119,6 @@ while True:
 		                        print("        | Ouch, it has a pretty low score.  Let's delete it.  The comment was found here: {0}".format(i.permalink))
                 		        i.delete()
         """ ======================== """
-        time.sleep(200)
+        time.sleep(800)
 
 
