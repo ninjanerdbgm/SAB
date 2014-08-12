@@ -41,7 +41,7 @@ First, let's make a list of some of the common ways to write the tag
 storytags = ['[stories]', '[story]', '[ stories]', '[stories ]', '[ stories ]', 'stories only']
 
 while True:
-        subreddit = r.get_subreddit('multiplayers')
+        subreddit = r.get_subreddit('askreddit')
         for submission in subreddit.get_hot(limit=150):
 #	    try:
                 """
@@ -64,7 +64,7 @@ while True:
 	                        for comment in submission.comments:
 	                                numcoms+=1
 	                        print("        | Total number of comments on this story: {0}".format(numcoms))
-	                        if numcoms > 2:
+	                        if numcoms > 15:
 	                                print("        | Building submission reply.")
 	                                makeaggregate = "Hello!  I am an aggregator bot designed to make it easier to find the stories posted in this topic.  Below is a list of stories:\n\nStory Blurb | Author\n--- | ---"
 					print("        | ======================================================================\
@@ -126,5 +126,5 @@ while True:
 					skip_posts.append(i.submission.id)
                 		        i.delete()
         """ ======================== """
-        time.sleep(20)
+        time.sleep(600)
 
