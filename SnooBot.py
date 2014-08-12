@@ -73,7 +73,7 @@ while True:
 						print("        | DEBUG: Comment length: {0}".format(len(comment.body)))
 					if len(comment.body) > 250 and comment.id not in already_covered:
                                                 author = comment.author
-                                                if author.name == "StoryAggregatorBot":
+                                                if author.name == "BOT_USERNAME":
                                                         edit_comments.append(comment)
 							madepost = 1
 						else:
