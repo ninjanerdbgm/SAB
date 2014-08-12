@@ -26,7 +26,7 @@ r = praw.Reddit('AskReddit [Stories] Aggregator Bot, v 0.00000000001'
                 'Seriously.  This thing is in, like, super alpha.'
                 'by /u/ninjanerdbgm')
 
-r.login('StoryAggregatorBot', 'ishouldprobablychangethis1')
+r.login('BOT_USERNAME', 'BOT_PASSWORD')
 already_done = []
 
 """
