@@ -110,7 +110,7 @@ while True:
 #			print("Evidently, something went wrong while trying to search for posts.  Reddit may be down for maintainence.  Let's just take a nap for a while and try again later.")
         """ Look for unpopular posts """
         print("Looking for unpopular bot posts...")
-        user = r.get_redditor("StoryAggregatorBot")
+        user = r.get_redditor("BOT_USERNAME")
         for i in user.get_comments(limit=300):
 				if DEBUG == 1:
 					print("        | DEBUG: Comment score: {0}".format(i.score))
