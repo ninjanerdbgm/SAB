@@ -4,7 +4,7 @@ from NotPlainText import *
 
 """ Enable or diable debug output """
 DEBUG = 0
-""" ----------------------------- """
+""" ============================= """
 
 """
 SnooBot
