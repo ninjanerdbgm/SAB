@@ -30,7 +30,7 @@ print("Attempting to connect to reddit...")
 loggedin=0
 while loggedin==0:
 	try:
-		r.login('StoryAggregatorBot', 'ishouldprobablychangethis1')
+		r.login('BOT_USERNAME', 'BOT_PASSWORD')
 		loggedin=1
 	except:
 		print("Unable to connect.  Reddit might be down.  Trying again in a few minutes...")
@@ -93,7 +93,7 @@ while True:
 		                                                    If it was, then we'll make a note to edit it later and skip it as
 		                                                    part of the aggregated posts.
 		                                                """
-		                                                if author.name == "StoryAggregatorBot":
+		                                                if author.name == "BOT_USERNAME":
 		                                                        edit_comments.append(comment)
 									madepost = 1
 								else:
@@ -145,7 +145,7 @@ while True:
 	print("Couldn't find anymore reddit posts for the time being.  Let's move on!")
         """ Look for unpopular posts """
         print("Looking for unpopular bot posts...")
-        user = r.get_redditor("StoryAggregatorBot")
+        user = r.get_redditor("BOT_USERNAME")
         for i in user.get_comments(limit=300):
 				if DEBUG == 1:
 					print("        | DEBUG: Comment score: {0}".format(i.score))
