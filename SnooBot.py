@@ -208,6 +208,14 @@ while True: # Begin the bot loop.  Run until ctrl+c, or until it hits an excepti
 			                                                a=0
 			                                                comlink=""
 
+									"""
+									==========================================================================
+
+									Guys, guys.  Guys.  Let's build a blurb.
+
+									==========================================================================
+									"""
+
 			                                                while a < 80:
 										try: 
 											if chr(ord(comment.body[a])) == chr(13) or chr(ord(comment.body[a])) == chr(10):
